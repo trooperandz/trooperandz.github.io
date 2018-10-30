@@ -3,6 +3,7 @@ body {
 }
 
 .wrapper-main {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,8 +37,20 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transform: scale(1);
+  /*transform: scale(1) skew(0);*/
   transition: transform .7s ease-in-out;
+}
+
+.image.scale {
+  transform: scale(3);
+}
+
+.image.rotate {
+  transform: rotate(180deg);
+}
+
+.image.skew {
+  transform: skew(20deg,10deg);
 }
 
 .image:hover {
@@ -56,6 +69,22 @@ body {
 .subheading {
   color: #fff;
   font-size: 30px;
+}
+
+.action-items {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 35px;
+  right: 40px;
+}
+
+.btn {
+  padding: 20px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+  margin: 10px;
 }
 
 .font-italic {
